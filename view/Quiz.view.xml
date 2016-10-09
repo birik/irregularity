@@ -1,0 +1,42 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" controllerName="es.irregularity.controller.Quiz">
+    <Page class="quiz" showHeader="false">
+      <content>
+        <mvc:XMLView viewName="es.irregularity.view.Navigation"/>
+        <l:Grid defaultSpan="L3 M6 S12" visible="{= ${question>/error} === undefined}">
+          <Panel class="sapUiSmallMarginTop" width="auto">
+            <content>
+              <Text text="{parts:['i18n>quiz.question', 'question>/word'],
+                    formatter: 'jQuery.sap.formatMessage'}"/>
+            </content>
+            <layoutData>
+              <l:GridData span="L6 M12 S12" indent="L3 M0 S0"/>
+            </layoutData>
+          </Panel>
+          <l:content>
+            <Button id="option_0" text="{question>/options/0/text}" fieldGroupIds="answerButton" class="quiz-button" press="onAnswer">
+              <layoutData>
+					      <l:GridData indent="L3 M0 S0"/>
+				      </layoutData>
+            </Button>
+            <Button id="option_1" text="{question>/options/1/text}" fieldGroupIds="answerButton" class="quiz-button" press="onAnswer"></Button>
+            <Button id="option_2" text="{question>/options/2/text}" fieldGroupIds="answerButton" class="quiz-button" press="onAnswer">
+              <layoutData>
+					      <l:GridData indent="L3 M0 S0" linebreak="true"/>
+				      </layoutData>
+            </Button>
+            <Button id="option_3" text="{question>/options/3/text}" fieldGroupIds="answerButton" class="quiz-button" press="onAnswer"></Button>
+          </l:content>
+          <Text id="resultQuiz">
+            <layoutData>
+              <l:GridData linebreak="true" indent="L3 M0 S0" span="L6 M12 S12"/>
+            </layoutData>
+          </Text>
+        </l:Grid>
+
+        <l:VerticalLayout width="100%" class="sapUiSmallMarginTop" visible="{= ${question>/error} === true}">
+          <Text text="{i18n>quiz.emptyList}" textAlign="Center"/>
+          <Link text="{i18n>quiz.linkToOverview}"	press="handleToOverview" textAlign="Center"/>
+        </l:VerticalLayout>
+      </content>
+    </Page>
+</mvc:View>

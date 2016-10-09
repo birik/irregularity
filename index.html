@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+  <meta name="author" content="Evgeny Segeda">
+  <meta name="keywords" content="openui5, German, Verbs">
+	<title>Irregularity</title>
+	<script
+		id="sap-ui-bootstrap"
+		src="https://openui5.hana.ondemand.com/1.40.7/resources/sap-ui-core.js"
+		data-sap-ui-theme="sap_bluecrystal"
+		data-sap-ui-libs="sap.m"
+		data-sap-ui-preload="async"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-resourceroots='{
+			"es.irregularity": "./"
+		}'>
+	</script>
+	<script>
+		sap.ui.getCore().attachInit(function () {
+      new sap.ui.core.ComponentContainer({
+				name: "es.irregularity"
+			}).placeAt("root");
+		});
+	</script>
+</head>
+<body class="sapUiBody sapUiSizeCozy" id="root">
+</body>
+</html>

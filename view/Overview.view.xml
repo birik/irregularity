@@ -1,0 +1,38 @@
+<mvc:View controllerName="es.irregularity.controller.Overview"
+  xmlns="sap.ui.table" xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc">
+    <m:Page showHeader="false">
+        <m:content>
+            <mvc:XMLView viewName="es.irregularity.view.Navigation"/>
+            <m:Panel headerText="{i18n>overview.hello}" class="sapUiResponsiveMargin" width="auto">
+                <m:content>
+                    <m:Text text="{i18n>overview.helloMessage}"/>
+                </m:content>
+            </m:Panel>
+            <Table id="verbTable" visibleRowCount="7" rows="{verb>/Verben}" selectionMode="MultiToggle" selectionBehavior="RowSelector" rowSelectionChange="onSelectChange" class="overview-table">
+                <columns>
+                    <Column>
+                        <m:Label text="{i18n>overview.infinitiv}"/>
+                        <template>
+                            <m:Text text="{verb>Infinitiv}"/>
+                        </template>
+                    </Column>
+                    <Column>
+                        <m:Label text="{i18n>overview.praeteritum}"/>
+                        <template>
+                            <m:Text text="{verb>Praeteritum}"/>
+                        </template>
+                    </Column>
+                    <Column>
+                        <m:Label text="{i18n>overview.translation}"/>
+                        <template>
+                            <m:Text text="{path: 'verb>Infinitiv', formatter: '.textFormatter.getI18nVerbTranslate'}" class="overview-table-translation"/>
+                        </template>
+                    </Column>
+                </columns>
+                <footer>
+                    <m:Text id="tableSummary"/>
+                </footer>
+            </Table>
+        </m:content>
+    </m:Page>
+</mvc:View>

@@ -1,0 +1,41 @@
+body{
+  overflow: hidden;
+}
+
+.overview-table .overview-table-translation{
+  word-break: normal;
+}
+
+.quiz .quiz-button.sapMBtn{
+  width: 100%;
+}
+
+.quiz .sapUiVltCell{
+  text-align: center;
+}
+
+.quiz-button-success, .quiz-button-error {
+  opacity: 1;
+}
+
+.quiz-button-success > .sapMBtnInner {
+  color: #4F8A10;
+  text-shadow: none;
+  background: #DFF2BF;
+  background: -webkit-linear-gradient(top,#DFF2BF 0, #DBEDBB 100%);
+  background: -o-linear-gradient(top,#DFF2BF 0, #DBEDBB 100%);
+  background: -moz-linear-gradient(top,#DFF2BF 0, #DBEDBB 100%);
+  background: linear-gradient(top,#DFF2BF 0, #DBEDBB 100%);
+  border-color:#D1E3B3;
+}
+
+.quiz-button-error > .sapMBtnInner {
+  color: #D8000C;
+  text-shadow: none;
+  background: #FFBABA;
+  background: -webkit-linear-gradient(top,#FFBABA 0, #FAB6B6 100%);
+  background: -o-linear-gradient(top,#FFBABA 0, #FAB6B6 100%);
+  background: -moz-linear-gradient(top,#FFBABA 0, #FAB6B6 100%);
+  background: linear-gradient(top,#FFBABA 0, #FAB6B6 100%);
+  border-color:#F2AEAE;
+}

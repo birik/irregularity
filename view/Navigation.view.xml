@@ -2,5 +2,7 @@
   <Toolbar design="Solid">
       <Button text="{i18n>navigation.overview}" press="openOverview"/>
       <Button text="{i18n>navigation.learn}" press="startQuiz"/>
+      <ToolbarSpacer/>
+      <Link	text="Project on GitHub"	target="_blank"	href="https://github.com/birik/irregularity" />
   </Toolbar>
 </mvc:View>
